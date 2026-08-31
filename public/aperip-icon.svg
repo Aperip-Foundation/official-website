@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024" fill="none" role="img">
+  <defs>
+    <linearGradient id="outer-gradient" x1="160" y1="170" x2="850" y2="830" gradientUnits="userSpaceOnUse" color-interpolation="sRGB">
+      <stop offset="0" stop-color="#000000"/>
+      <stop offset="0.52" stop-color="#21102D"/>
+      <stop offset="1" stop-color="#7935A8"/>
+    </linearGradient>
+    <linearGradient id="inner-gradient" x1="78" y1="650" x2="960" y2="650" gradientUnits="userSpaceOnUse" color-interpolation="sRGB">
+      <stop offset="0" stop-color="#FFC9DC"/>
+      <stop offset="0.48" stop-color="#F2639E"/>
+      <stop offset="1" stop-color="#B40E55"/>
+    </linearGradient>
+    <mask id="violet-under" maskUnits="userSpaceOnUse" x="0" y="0" width="1024" height="1024" style="mask-type:luminance">
+      <rect width="1024" height="1024" fill="white"/>
+      <path d="M78 790.64C171 787.4 260 721.52 346 613.52C402.76 542.24 452 477.44 530 427.76" stroke="black" stroke-width="136" stroke-linecap="round"/>
+    </mask>
+    <mask id="rose-under" maskUnits="userSpaceOnUse" x="0" y="0" width="1024" height="1024" style="mask-type:luminance">
+      <rect width="1024" height="1024" fill="white"/>
+      <path d="M804 330.56C862.5 423.872 865 516.32 816 594.08C762.1 679.616 703 749.6 638 804.68" stroke="black" stroke-width="136" stroke-linecap="round"/>
+    </mask>
+  </defs>
+  <g transform="translate(64 28)">
+    <g transform="rotate(18 512 512)">
+      <path d="M160 274.4C305 185.84 430 143.72 545 151.28C660 158.84 739 226.88 804 330.56C862.5 423.872 865 516.32 816 594.08C762.1 679.616 703 749.6 638 804.68C574 858.68 462 873 412 803.6L205 515.24" stroke="url(#outer-gradient)" stroke-width="96" stroke-linecap="butt" stroke-linejoin="round" mask="url(#violet-under)"/>
+      <path d="M78 790.64C171 787.4 260 721.52 346 613.52C402.76 542.24 452 477.44 530 427.76C600 383.48 666 390.39 718 443.96L959.56 692.75" stroke="url(#inner-gradient)" stroke-width="96" stroke-linecap="butt" stroke-linejoin="round" mask="url(#rose-under)"/>
+    </g>
+  </g>
+</svg>
