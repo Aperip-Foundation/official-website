@@ -1,0 +1,69 @@
+[meta]
+title = "Aperip"
+description = "Aperip began with a creative project. Its work now includes cultural exchange, open-source contribution, and service to communities."
+
+[loading]
+label = "Loading the scene"
+
+[navigation]
+scrollCue = "Scroll to continue"
+
+[intro]
+name = "Aperip"
+eyebrow = "About Aperip"
+body = "Aperip began by making A Pathetic Epoch: Rejuvenation In Purgatory. Over time, the work broadened toward cultural communication and promotion, open-source contribution, and service to communities."
+
+[projects]
+heading = "Selected work"
+repositoryLabel = "Repository"
+externalLinkLabel = "View repository"
+
+[projects.items.ape]
+name = "A Pathetic Epoch: Rejuvenation In Purgatory"
+owner = "Team-APE-RIP"
+description = "A Hearts of Iron IV alternate-history mod."
+ariaLabel = "Open the Team-APE-RIP/APE repository in a new tab"
+
+[projects.items.toolStudio]
+name = "APE-HOI4-Tool-Studio"
+owner = "Team-APE-RIP"
+description = "A modular desktop workspace for Hearts of Iron IV creation tools, built in C++ around a tool and plugin architecture."
+ariaLabel = "Open the Team-APE-RIP/APE-HOI4-Tool-Studio repository in a new tab"
+
+[projects.items.aperipNomos]
+name = "AperipNomos"
+owner = "Aperip-Daedalus-Foundation"
+description = "A small self-hosted archive for publishing Aperip's open-source license texts, with a public catalog and a separate admin interface. Built in Rust."
+ariaLabel = "Open the Aperip-Daedalus-Foundation/AperipNomos repository in a new tab"
+
+[projects.items.rhoiScribe]
+name = "RHoiScribe"
+owner = "CzXieDdan"
+description = "A local MCP server and Skill for Hearts of Iron IV modding agent workflows, with local references and tools that generate game-readable files."
+ariaLabel = "Open the czxieddan/RHoiScribe repository in a new tab"
+
+[platforms]
+heading = "Aperip"
+
+[platforms.items.github]
+name = "GitHub"
+ariaLabel = "Open Aperip on GitHub in a new tab"
+
+[platforms.items.discord]
+name = "Discord"
+ariaLabel = "Open Aperip on Discord in a new tab"
+
+[platforms.items.qq]
+name = "QQ"
+ariaLabel = "Open Aperip on QQ in a new tab"
+
+[platforms.items.bilibili]
+name = "Bilibili"
+ariaLabel = "Open Aperip on Bilibili in a new tab"
+
+[platforms.items.x]
+name = "X"
+ariaLabel = "Open Aperip on X in a new tab"
+
+[fallback]
+modelUnavailable = "The scene could not be loaded."

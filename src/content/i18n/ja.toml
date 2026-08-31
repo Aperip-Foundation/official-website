@@ -1,0 +1,69 @@
+[meta]
+title = "Aperip"
+description = "Aperipは、一つの創作プロジェクトから始まりました。今は文化の交流と発信、オープンソースへの貢献、コミュニティに向けた活動にも目を向けています。"
+
+[loading]
+label = "シーンを読み込んでいます"
+
+[navigation]
+scrollCue = "スクロールして続ける"
+
+[intro]
+name = "Aperip"
+eyebrow = "Aperipについて"
+body = "Aperipは、A Pathetic Epoch: Rejuvenation In Purgatoryの制作から始まりました。その後、文化の交流と発信、オープンソースへの貢献、コミュニティに向けた活動へと関心を広げてきました。"
+
+[projects]
+heading = "主な取り組み"
+repositoryLabel = "リポジトリ"
+externalLinkLabel = "リポジトリを見る"
+
+[projects.items.ape]
+name = "A Pathetic Epoch: Rejuvenation In Purgatory"
+owner = "Team-APE-RIP"
+description = "Hearts of Iron IV向けの架空歴史Modです。"
+ariaLabel = "Team-APE-RIP/APEリポジトリを新しいタブで開く"
+
+[projects.items.toolStudio]
+name = "APE-HOI4-Tool-Studio"
+owner = "Team-APE-RIP"
+description = "Hearts of Iron IVの制作ツールをまとめるモジュール式デスクトップワークスペースです。ツールとプラグインによる構成を採用し、C++で開発されています。"
+ariaLabel = "Team-APE-RIP/APE-HOI4-Tool-Studioリポジトリを新しいタブで開く"
+
+[projects.items.aperipNomos]
+name = "AperipNomos"
+owner = "Aperip-Daedalus-Foundation"
+description = "Aperipのオープンソースライセンス文書を公開するための小規模なセルフホスト型アーカイブです。公開カタログと独立した管理画面を備え、Rustで開発されています。"
+ariaLabel = "Aperip-Daedalus-Foundation/AperipNomosリポジトリを新しいタブで開く"
+
+[projects.items.rhoiScribe]
+name = "RHoiScribe"
+owner = "CzXieDdan"
+description = "Hearts of Iron IVのMod制作に携わるエージェント向けのローカルMCPサーバーとSkillです。ローカルの参考資料と、ゲームが読み込めるファイルを生成するツールを提供します。"
+ariaLabel = "czxieddan/RHoiScribeリポジトリを新しいタブで開く"
+
+[platforms]
+heading = "Aperip"
+
+[platforms.items.github]
+name = "GitHub"
+ariaLabel = "AperipのGitHubページを新しいタブで開く"
+
+[platforms.items.discord]
+name = "Discord"
+ariaLabel = "AperipのDiscordページを新しいタブで開く"
+
+[platforms.items.qq]
+name = "QQ"
+ariaLabel = "AperipのQQページを新しいタブで開く"
+
+[platforms.items.bilibili]
+name = "Bilibili"
+ariaLabel = "AperipのBilibiliページを新しいタブで開く"
+
+[platforms.items.x]
+name = "X"
+ariaLabel = "AperipのXページを新しいタブで開く"
+
+[fallback]
+modelUnavailable = "シーンを読み込めませんでした。"

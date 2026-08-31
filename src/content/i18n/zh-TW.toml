@@ -1,0 +1,69 @@
+[meta]
+title = "Aperip"
+description = "Aperip 源於一個創作專案，後來逐漸關注文化交流與推廣、開源貢獻，以及面向社群的服務。"
+
+[loading]
+label = "場景載入中"
+
+[navigation]
+scrollCue = "向下捲動"
+
+[intro]
+name = "Aperip"
+eyebrow = "關於 Aperip"
+body = "Aperip 最初從創作 A Pathetic Epoch: Rejuvenation In Purgatory 開始。後來，Aperip 也開始關注文化交流與推廣、開源貢獻，以及面向社群的服務。"
+
+[projects]
+heading = "部分專案"
+repositoryLabel = "程式碼儲存庫"
+externalLinkLabel = "查看程式碼儲存庫"
+
+[projects.items.ape]
+name = "A Pathetic Epoch: Rejuvenation In Purgatory"
+owner = "Team-APE-RIP"
+description = "一款 Hearts of Iron IV 架空歷史模組。"
+ariaLabel = "在新分頁中開啟 Team-APE-RIP/APE 程式碼儲存庫"
+
+[projects.items.toolStudio]
+name = "APE-HOI4-Tool-Studio"
+owner = "Team-APE-RIP"
+description = "面向 Hearts of Iron IV 創作工具的模組化桌面工作空間，採用工具與外掛架構，以 C++ 開發。"
+ariaLabel = "在新分頁中開啟 Team-APE-RIP/APE-HOI4-Tool-Studio 程式碼儲存庫"
+
+[projects.items.aperipNomos]
+name = "AperipNomos"
+owner = "Aperip-Daedalus-Foundation"
+description = "一項小型自架服務，用來發布 Aperip 的開源授權條款文本，並分設公開目錄與管理介面。以 Rust 開發。"
+ariaLabel = "在新分頁中開啟 Aperip-Daedalus-Foundation/AperipNomos 程式碼儲存庫"
+
+[projects.items.rhoiScribe]
+name = "RHoiScribe"
+owner = "CzXieDdan"
+description = "面向 Hearts of Iron IV 模組開發智慧代理工作流程的本機 MCP 伺服器與 Skill，提供本機參考資料，以及產生遊戲可讀取檔案的工具。"
+ariaLabel = "在新分頁中開啟 czxieddan/RHoiScribe 程式碼儲存庫"
+
+[platforms]
+heading = "Aperip"
+
+[platforms.items.github]
+name = "GitHub"
+ariaLabel = "在新分頁中開啟 Aperip 的 GitHub 頁面"
+
+[platforms.items.discord]
+name = "Discord"
+ariaLabel = "在新分頁中開啟 Aperip 的 Discord 頁面"
+
+[platforms.items.qq]
+name = "QQ"
+ariaLabel = "在新分頁中開啟 Aperip 的 QQ 頁面"
+
+[platforms.items.bilibili]
+name = "Bilibili"
+ariaLabel = "在新分頁中開啟 Aperip 的 Bilibili 頁面"
+
+[platforms.items.x]
+name = "X"
+ariaLabel = "在新分頁中開啟 Aperip 的 X 頁面"
+
+[fallback]
+modelUnavailable = "場景未能載入。"

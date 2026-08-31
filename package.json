@@ -12,7 +12,7 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "typecheck": "tsc -b --pretty false",
-    "check:locales": "node --input-type=module --eval \"process.exit(0)\"",
+    "check:locales": "node scripts/validate-locales.mjs",
     "verify": "npm run check:locales && npm run typecheck && npm run lint && npm run build"
   },
   "dependencies": {
