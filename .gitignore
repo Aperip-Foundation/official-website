@@ -1,0 +1,24 @@
+# Local Codex plans, probes, and agent-only tests
+.codex/
+
+# Dependencies and build output
+node_modules/
+dist/
+
+# Local environment files
+.env
+.env.*
+!.env.example
+
+# Tooling caches and reports
+.vite/
+coverage/
+playwright-report/
+test-results/
+
+# Editor and operating-system files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
