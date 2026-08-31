@@ -58,7 +58,7 @@ export function sampleModelPose(
     y = upperOffset
     scale = PROJECT_SCALE
   } else {
-    const returnPosition = segmentProgress(clampedProgress, 0.78, 0.9)
+    const returnPosition = segmentProgress(clampedProgress, 0.78, 1)
     const returnScale = segmentProgress(clampedProgress, 0.78, 1)
     x = interpolate(leftOffset, 0, returnPosition)
     y = interpolate(upperOffset, 0, returnPosition)
