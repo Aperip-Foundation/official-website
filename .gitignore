@@ -15,10 +15,11 @@ dist/
 coverage/
 playwright-report/
 test-results/
+blob-report/
+.playwright/
 
 # Editor and operating-system files
 .idea/
 .vscode/
 .DS_Store
 Thumbs.db
-
