@@ -1,0 +1,21 @@
+services:
+  web:
+    image: aperip-official-website:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        VITE_PLATFORM_GITHUB_URL: ${PLATFORM_GITHUB_URL:-https://github.com/TAperip-Foundation}
+        VITE_PLATFORM_DISCORD_URL: ${PLATFORM_DISCORD_URL:-https://discord.gg/TaNYDC6kfJ}
+        VITE_PLATFORM_QQ_URL: ${PLATFORM_QQ_URL:-https://pd.qq.com/s/clcwlblcm?b=5}
+        VITE_PLATFORM_BILIBILI_URL: ${PLATFORM_BILIBILI_URL:-https://space.bilibili.com/1220845388}
+        VITE_PLATFORM_X_URL: ${PLATFORM_X_URL:-https://x.com/TeamAPEOfficial}
+    ports:
+      - "${PORT:-8080}:8080"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://127.0.0.1:8080/healthz"]
+      interval: 30s
+      timeout: 3s
+      start_period: 5s
+      retries: 3
