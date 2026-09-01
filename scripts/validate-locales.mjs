@@ -20,16 +20,21 @@ function placeholders(value) {
   return [...new Set([...value.matchAll(/\{([^{}]+)\}/g)].map((match) => match[1]))].sort()
 }
 
-function collectLeaves(value, path = '', leaves = new Map()) {
-  if (isRecord(value)) {
-    for (const [key, child] of Object.entries(value)) {
-      collectLeaves(child, path ? `${path}.${key}` : key, leaves)
-    }
-    return leaves
+function collectNodes(value, path = '', nodes = new Map()) {
+  if (path) {
+    nodes.set(path, {
+      type: isRecord(value) ? 'table' : valueType(value),
+      placeholders: placeholders(value),
+    })
   }
 
-  leaves.set(path, { type: valueType(value), placeholders: placeholders(value) })
-  return leaves
+  if (isRecord(value)) {
+    for (const [key, child] of Object.entries(value)) {
+      collectNodes(child, path ? `${path}.${key}` : key, nodes)
+    }
+  }
+
+  return nodes
 }
 
 function parseLocaleSource(source, locale) {
@@ -47,9 +52,9 @@ function sameValues(left, right) {
   return left.length === right.length && left.every((value, index) => value === right[index])
 }
 
-function validateAgainstEnglish(englishLeaves, localizedLeaves, locale) {
-  for (const [path, english] of englishLeaves) {
-    const localized = localizedLeaves.get(path)
+function validateAgainstEnglish(englishNodes, localizedNodes, locale) {
+  for (const [path, english] of englishNodes) {
+    const localized = localizedNodes.get(path)
     if (!localized) throw new Error(`${locale}: missing key ${path}`)
     if (localized.type !== english.type) {
       throw new Error(`${locale}: changed value type at ${path} (${english.type} to ${localized.type})`)
@@ -59,8 +64,8 @@ function validateAgainstEnglish(englishLeaves, localizedLeaves, locale) {
     }
   }
 
-  for (const path of localizedLeaves.keys()) {
-    if (!englishLeaves.has(path)) throw new Error(`${locale}: extra key ${path}`)
+  for (const path of localizedNodes.keys()) {
+    if (!englishNodes.has(path)) throw new Error(`${locale}: extra key ${path}`)
   }
 }
 
@@ -79,10 +84,10 @@ export function validateLocaleDirectory(directory = resolve('src/content/i18n'))
     locale,
     parseLocaleSource(readFileSync(resolve(directory, `${locale}.toml`), 'utf8'), locale),
   ]))
-  const englishLeaves = collectLeaves(sources.en)
+  const englishNodes = collectNodes(sources.en)
 
   for (const locale of requiredLocales.filter((locale) => locale !== 'en')) {
-    validateAgainstEnglish(englishLeaves, collectLeaves(sources[locale]), locale)
+    validateAgainstEnglish(englishNodes, collectNodes(sources[locale]), locale)
   }
 }
 
