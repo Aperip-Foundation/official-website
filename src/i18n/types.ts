@@ -4,12 +4,12 @@ export interface SiteContent {
   meta: { title: string; description: string }
   loading: { label: string }
   navigation: { scrollCue: string }
-  intro: { name: string; eyebrow: string; body: string }
+  intro: { name: string; line1: string; line2: string }
   projects: {
     heading: string
     repositoryLabel: string
     externalLinkLabel: string
-    items: Record<'ape' | 'toolStudio' | 'aperipNomos' | 'rhoiScribe', {
+    items: Record<'ape' | 'toolStudio' | 'rhoiScribe' | 'ahcl', {
       name: string
       owner: string
       description: string

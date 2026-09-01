@@ -1,5 +1,5 @@
 [meta]
-title = "Aperip"
+title = "Aperip Foundation"
 description = "Aperip began with a creative project. Its work now includes cultural exchange, open-source contribution, and service to communities."
 
 [loading]
@@ -10,8 +10,8 @@ scrollCue = "Scroll to continue"
 
 [intro]
 name = "Aperip"
-eyebrow = "About Aperip"
-body = "Aperip began by making A Pathetic Epoch: Rejuvenation In Purgatory. Over time, the work broadened toward cultural communication and promotion, open-source contribution, and service to communities."
+line1 = "Aperip began by making A Pathetic Epoch: Rejuvenation In Purgatory."
+line2 = "Since then, it has also focused on cultural exchange and promotion, open-source contribution, and service to communities."
 
 [projects]
 heading = "Selected work"
@@ -30,17 +30,17 @@ owner = "Team-APE-RIP"
 description = "A modular desktop workspace for Hearts of Iron IV creation tools, built in C++ around a tool and plugin architecture."
 ariaLabel = "Open the Team-APE-RIP/APE-HOI4-Tool-Studio repository in a new tab"
 
-[projects.items.aperipNomos]
-name = "AperipNomos"
-owner = "Aperip-Daedalus-Foundation"
-description = "A small self-hosted archive for publishing Aperip's open-source license texts, with a public catalog and a separate admin interface. Built in Rust."
-ariaLabel = "Open the Aperip-Daedalus-Foundation/AperipNomos repository in a new tab"
-
 [projects.items.rhoiScribe]
 name = "RHoiScribe"
 owner = "CzXieDdan"
 description = "A local MCP server and Skill for Hearts of Iron IV modding agent workflows, with local references and tools that generate game-readable files."
 ariaLabel = "Open the czxieddan/RHoiScribe repository in a new tab"
+
+[projects.items.ahcl]
+name = "Aperip Heimdall Commons License 1.1"
+owner = "Aperip Daedalus Foundation"
+description = "An open-source license centered on continuous access to complete corresponding source, preserved modification history, dependency transparency, version migration, and downstream propagation."
+ariaLabel = "Open the official AHCL license catalog in a new tab"
 
 [platforms]
 heading = "Aperip"

@@ -1,5 +1,5 @@
 [meta]
-title = "Aperip"
+title = "Aperip Foundation"
 description = "Aperipは、一つの創作プロジェクトから始まりました。今は文化の交流と発信、オープンソースへの貢献、コミュニティに向けた活動にも目を向けています。"
 
 [loading]
@@ -10,8 +10,8 @@ scrollCue = "スクロールして続ける"
 
 [intro]
 name = "Aperip"
-eyebrow = "Aperipについて"
-body = "Aperipは、A Pathetic Epoch: Rejuvenation In Purgatoryの制作から始まりました。その後、文化の交流と発信、オープンソースへの貢献、コミュニティに向けた活動へと関心を広げてきました。"
+line1 = "Aperipは、A Pathetic Epoch: Rejuvenation In Purgatoryの制作から始まりました。"
+line2 = "その後は、文化の交流と発信、オープンソースへの貢献、コミュニティに向けた活動にも取り組んでいます。"
 
 [projects]
 heading = "主な取り組み"
@@ -21,7 +21,7 @@ externalLinkLabel = "リポジトリを見る"
 [projects.items.ape]
 name = "A Pathetic Epoch: Rejuvenation In Purgatory"
 owner = "Team-APE-RIP"
-description = "Hearts of Iron IV向けの架空歴史Modです。"
+description = "Hearts of Iron IV向けの架空歴史MODです。"
 ariaLabel = "Team-APE-RIP/APEリポジトリを新しいタブで開く"
 
 [projects.items.toolStudio]
@@ -30,17 +30,17 @@ owner = "Team-APE-RIP"
 description = "Hearts of Iron IVの制作ツールをまとめるモジュール式デスクトップワークスペースです。ツールとプラグインによる構成を採用し、C++で開発されています。"
 ariaLabel = "Team-APE-RIP/APE-HOI4-Tool-Studioリポジトリを新しいタブで開く"
 
-[projects.items.aperipNomos]
-name = "AperipNomos"
-owner = "Aperip-Daedalus-Foundation"
-description = "Aperipのオープンソースライセンス文書を公開するための小規模なセルフホスト型アーカイブです。公開カタログと独立した管理画面を備え、Rustで開発されています。"
-ariaLabel = "Aperip-Daedalus-Foundation/AperipNomosリポジトリを新しいタブで開く"
-
 [projects.items.rhoiScribe]
 name = "RHoiScribe"
 owner = "CzXieDdan"
 description = "Hearts of Iron IVのMod制作に携わるエージェント向けのローカルMCPサーバーとSkillです。ローカルの参考資料と、ゲームが読み込めるファイルを生成するツールを提供します。"
 ariaLabel = "czxieddan/RHoiScribeリポジトリを新しいタブで開く"
+
+[projects.items.ahcl]
+name = "Aperip Heimdall Commons License 1.1"
+owner = "Aperip Daedalus Foundation"
+description = "完全な対応ソースの継続的な提供、変更履歴の保存、依存関係の透明性、バージョン移行、下流への継承を重視するオープンソースライセンスです。"
+ariaLabel = "AHCLの公式ライセンス一覧を新しいタブで開く"
 
 [platforms]
 heading = "Aperip"

@@ -1,5 +1,5 @@
 [meta]
-title = "Aperip"
+title = "Aperip Foundation"
 description = "В основе Aperip был творческий проект. Позже к нему добавились работа с культурой, вклад в открытые проекты и помощь сообществам."
 
 [loading]
@@ -10,8 +10,8 @@ scrollCue = "Прокрутите, чтобы продолжить"
 
 [intro]
 name = "Aperip"
-eyebrow = "Об Aperip"
-body = "История Aperip началась с работы над A Pathetic Epoch: Rejuvenation In Purgatory. Со временем круг интересов расширился: культурный обмен и продвижение культуры, вклад в открытые проекты и работа для сообществ."
+line1 = "Aperip начался с работы над A Pathetic Epoch: Rejuvenation In Purgatory."
+line2 = "Позже к этому добавились культурный обмен и популяризация культуры, вклад в открытые проекты и работа с сообществами."
 
 [projects]
 heading = "Некоторые работы"
@@ -30,17 +30,17 @@ owner = "Team-APE-RIP"
 description = "Модульное настольное рабочее пространство для инструментов создания контента Hearts of Iron IV. Основано на архитектуре инструментов и плагинов, написано на C++."
 ariaLabel = "Открыть репозиторий Team-APE-RIP/APE-HOI4-Tool-Studio в новой вкладке"
 
-[projects.items.aperipNomos]
-name = "AperipNomos"
-owner = "Aperip-Daedalus-Foundation"
-description = "Небольшой самостоятельно размещаемый архив для публикации текстов открытых лицензий Aperip, с публичным каталогом и отдельной панелью управления. Написан на Rust."
-ariaLabel = "Открыть репозиторий Aperip-Daedalus-Foundation/AperipNomos в новой вкладке"
-
 [projects.items.rhoiScribe]
 name = "RHoiScribe"
 owner = "CzXieDdan"
-description = "Локальный сервер MCP и Skill для агентных процессов моддинга Hearts of Iron IV. Содержит локальные справочные материалы и инструменты для создания файлов, которые читает игра."
+description = "Локальный MCP-сервер и Skill для агентных рабочих процессов в моддинге Hearts of Iron IV. Включает локальные справочные материалы и инструменты для создания файлов, которые читает игра."
 ariaLabel = "Открыть репозиторий czxieddan/RHoiScribe в новой вкладке"
+
+[projects.items.ahcl]
+name = "Aperip Heimdall Commons License 1.1"
+owner = "Aperip Daedalus Foundation"
+description = "Открытая лицензия, в центре которой постоянный доступ к полному соответствующему исходному коду, сохранение истории изменений, прозрачность зависимостей, переход на новые версии и передача условий далее."
+ariaLabel = "Открыть официальный каталог лицензий AHCL в новой вкладке"
 
 [platforms]
 heading = "Aperip"

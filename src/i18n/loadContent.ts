@@ -12,7 +12,7 @@ const contentShape = {
   meta: { title: '', description: '' },
   loading: { label: '' },
   navigation: { scrollCue: '' },
-  intro: { name: '', eyebrow: '', body: '' },
+  intro: { name: '', line1: '', line2: '' },
   projects: {
     heading: '',
     repositoryLabel: '',
@@ -20,8 +20,8 @@ const contentShape = {
     items: {
       ape: { name: '', owner: '', description: '', ariaLabel: '' },
       toolStudio: { name: '', owner: '', description: '', ariaLabel: '' },
-      aperipNomos: { name: '', owner: '', description: '', ariaLabel: '' },
       rhoiScribe: { name: '', owner: '', description: '', ariaLabel: '' },
+      ahcl: { name: '', owner: '', description: '', ariaLabel: '' },
     },
   },
   platforms: {
