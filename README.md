@@ -1,4 +1,4 @@
-# Aperip Official Website
+# Aperip Foundation Official Website
 
 Source repository for the Aperip organization website.
 
@@ -32,6 +32,7 @@ Nginx serves the single-page application with history fallback. Its container he
 Platform destinations are compiled into the Vite bundle during the image build. The Compose file accepts the supplied `PLATFORM_*` names and passes them to the `VITE_PLATFORM_*` build variables used by the frontend. Put overrides in a local `.env` file or export them before building:
 
 ```dotenv
+PORT=8080
 PLATFORM_GITHUB_URL=https://github.com/TAperip-Foundation
 PLATFORM_DISCORD_URL=https://discord.gg/TaNYDC6kfJ
 PLATFORM_QQ_URL=https://pd.qq.com/s/clcwlblcm?b=5

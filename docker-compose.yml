@@ -1,6 +1,6 @@
 services:
   web:
-    image: aperip-official-website:latest
+    image: aperip-foundation-official-website:latest
     build:
       context: .
       dockerfile: Dockerfile
