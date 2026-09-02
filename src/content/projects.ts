@@ -15,8 +15,8 @@ export interface ProjectDefinition {
 export const PROJECTS: readonly ProjectDefinition[] = [
   {
     id: 'ape',
-    href: 'https://github.com/Team-APE-RIP/APE',
-    asset: '/assets/projects/ape-logo.png',
+    href: 'https://mod.aperip.com/',
+    asset: '/assets/projects/ape-group-mark.webp',
     titleKey: 'projects.items.ape.name',
     ownerKey: 'projects.items.ape.owner',
     descriptionKey: 'projects.items.ape.description',
@@ -24,7 +24,7 @@ export const PROJECTS: readonly ProjectDefinition[] = [
   },
   {
     id: 'toolStudio',
-    href: 'https://github.com/Team-APE-RIP/APE-HOI4-Tool-Studio',
+    href: 'https://www.aperip.com/?view=ape-hoi4-tool-studio#ape-hoi4-tool-studio',
     asset: '/assets/projects/tool-studio.ico',
     titleKey: 'projects.items.toolStudio.name',
     ownerKey: 'projects.items.toolStudio.owner',
