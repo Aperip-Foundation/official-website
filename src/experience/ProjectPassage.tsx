@@ -8,9 +8,7 @@ export interface ProjectCopy {
   ariaLabel: string
 }
 
-export interface ProjectPassageContent extends ProjectCopy {
-  externalLinkLabel: string
-}
+export type ProjectPassageContent = ProjectCopy
 
 export interface ProjectPassageProps {
   project: ProjectDefinition
@@ -19,12 +17,26 @@ export interface ProjectPassageProps {
   active?: boolean
 }
 
+function getProjectTitleLines(name: string, keepFinalWordsTogether: boolean): readonly string[] {
+  if (!keepFinalWordsTogether) return [name]
+
+  const words = name.trim().split(/\s+/)
+  if (words.length < 3) return [name]
+
+  return [
+    words.slice(0, -2).join(' '),
+    words.slice(-2).join('\u00a0'),
+  ]
+}
+
 // A semantic project passage; the shared scroll timeline owns its transforms.
 export const ProjectPassage = forwardRef<HTMLLIElement, ProjectPassageProps>(
   function ProjectPassage(
     { project, content, index = 0, active = false },
     ref: Ref<HTMLLIElement>,
   ) {
+    const titleLines = getProjectTitleLines(content.name, project.id === 'ahcl')
+
     return (
       <li
         ref={ref}
@@ -56,11 +68,18 @@ export const ProjectPassage = forwardRef<HTMLLIElement, ProjectPassageProps>(
               </span>
               <figcaption className="project-passage__copy">
                 <span className="project-passage__owner">{content.owner}</span>
-                <h3 className="project-passage__title">{content.name}</h3>
+                <h3
+                  className="project-passage__title"
+                  data-project-title-lines={titleLines.length}
+                  aria-label={content.name}
+                >
+                  {titleLines.map((line) => (
+                    <span className="project-passage__title-line" aria-hidden="true" key={line}>
+                      {line}
+                    </span>
+                  ))}
+                </h3>
                 <p className="project-passage__description">{content.description}</p>
-                <span className="project-passage__action" aria-hidden="true">
-                  {content.externalLinkLabel}
-                </span>
               </figcaption>
             </figure>
           </a>

@@ -16,7 +16,6 @@ line2 = "后来，工作也延伸到文化交流与推广、开源贡献和社�
 [projects]
 heading = "部分项目"
 repositoryLabel = "代码仓库"
-externalLinkLabel = "查看代码仓库"
 
 [projects.items.ape]
 name = "A Pathetic Epoch: Rejuvenation In Purgatory"
@@ -37,7 +36,7 @@ description = "面向 Hearts of Iron IV 模组开发智能体工作流的本地 
 ariaLabel = "在新标签页中打开 czxieddan/RHoiScribe 代码仓库"
 
 [projects.items.ahcl]
-name = "Aperip Heimdall Commons License 1.1"
+name = "Aperip Heimdall Commons License"
 owner = "Aperip Daedalus Foundation"
 description = "一份强调持续提供完整对应源代码、保留完整修改历史、透明披露依赖关系、版本迁移与下游传递的开源许可证。"
 ariaLabel = "在新标签页中打开 AHCL 官方许可证目录"
@@ -64,6 +63,9 @@ ariaLabel = "在新标签页中打开 Aperip 的 Bilibili 页面"
 [platforms.items.x]
 name = "X"
 ariaLabel = "在新标签页中打开 Aperip 的 X 页面"
+
+[footer]
+copyright = "© Aperip"
 
 [fallback]
 modelUnavailable = "场景未能载入。"

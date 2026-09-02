@@ -16,7 +16,6 @@ const contentShape = {
   projects: {
     heading: '',
     repositoryLabel: '',
-    externalLinkLabel: '',
     items: {
       ape: { name: '', owner: '', description: '', ariaLabel: '' },
       toolStudio: { name: '', owner: '', description: '', ariaLabel: '' },
@@ -34,6 +33,7 @@ const contentShape = {
       x: { name: '', ariaLabel: '' },
     },
   },
+  footer: { copyright: '' },
   fallback: { modelUnavailable: '' },
 } as const satisfies ContentNode
 

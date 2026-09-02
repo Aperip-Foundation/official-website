@@ -31,6 +31,8 @@ import {
 const MODEL_URL = '/assets/aperip-logo.glb'
 const PRECISE_BOUNDS_ROTATION_STEP = 0.04
 const FIXED_ROTATION_EPSILON = 0.000001
+const LOADER_COMPLETE_HOLD_MS = 180
+const LOADER_FADE_MS = 520
 
 // Shared with ignored scene-contract tests; this file owns the renderer setup.
 // eslint-disable-next-line react-refresh/only-export-components
@@ -62,7 +64,6 @@ export const SCENE_PRESENTATION = {
 export interface ModelStageProps {
   reducedMotion: boolean
   modelAnchorRef: RefObject<HTMLDivElement | null>
-  wordmark: string
   loadingLabel: string
   failureLabel: string
   onModelAspectChange?: (aspect: number) => void
@@ -364,7 +365,6 @@ function ModelScene({
 export function ModelStage({
   reducedMotion,
   modelAnchorRef,
-  wordmark,
   loadingLabel,
   failureLabel,
   onModelAspectChange,
@@ -372,27 +372,57 @@ export function ModelStage({
   onFailure,
 }: ModelStageProps): JSX.Element {
   const [state, setState] = useState<LoadingWordmarkState>('loading')
+  const [revealed, setRevealed] = useState(false)
   const [failureReason, setFailureReason] = useState<string | null>(null)
-  const readyNotifiedRef = useRef(false)
+  const completionScheduledRef = useRef(false)
+  const revealTimersRef = useRef<number[]>([])
+
+  const clearRevealTimers = useCallback(() => {
+    revealTimersRef.current.forEach((timer) => window.clearTimeout(timer))
+    revealTimersRef.current = []
+  }, [])
+
+  const queueReveal = useCallback((
+    completionState: Extract<LoadingWordmarkState, 'complete' | 'failed'>,
+    notify: () => void,
+  ) => {
+    clearRevealTimers()
+    setState(completionState)
+
+    const fadeTimer = window.setTimeout(() => {
+      setState('ready')
+
+      const revealTimer = window.setTimeout(() => {
+        setRevealed(true)
+        notify()
+      }, LOADER_FADE_MS)
+      revealTimersRef.current.push(revealTimer)
+    }, LOADER_COMPLETE_HOLD_MS)
+    revealTimersRef.current.push(fadeTimer)
+  }, [clearRevealTimers])
+
+  useEffect(() => clearRevealTimers, [clearRevealTimers])
 
   const handleReady = useCallback(() => {
-    if (readyNotifiedRef.current) return
+    if (completionScheduledRef.current) return
 
-    readyNotifiedRef.current = true
-    setState('ready')
-    onReady?.()
-  }, [onReady])
+    completionScheduledRef.current = true
+    queueReveal('complete', () => onReady?.())
+  }, [onReady, queueReveal])
 
   const handleFailure = useCallback((error: unknown) => {
+    if (completionScheduledRef.current) return
+
+    completionScheduledRef.current = true
     setFailureReason(error instanceof Error ? error.message : String(error))
-    setState('failed')
-    onFailure?.(error)
-  }, [onFailure])
+    queueReveal('failed', () => onFailure?.(error))
+  }, [onFailure, queueReveal])
 
   return (
     <div
       className="model-stage"
       data-model-state={state}
+      data-model-revealed={revealed}
       data-model-error={failureReason ?? undefined}
     >
       <ModelErrorBoundary onError={handleFailure}>
@@ -422,7 +452,6 @@ export function ModelStage({
         </Canvas>
       </ModelErrorBoundary>
       <LoadingWordmark
-        wordmark={wordmark}
         loadingLabel={loadingLabel}
         failureLabel={failureLabel}
         state={state}

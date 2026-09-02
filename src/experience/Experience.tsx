@@ -89,6 +89,7 @@ export function Experience({
   }
 
   const handleModelFailure = (error: unknown) => {
+    setModelReady(true)
     onModelFailure?.(error)
   }
 
@@ -102,7 +103,6 @@ export function Experience({
         <div ref={stageRef} className="experience-stage" data-experience-stage>
           <ModelStage
             reducedMotion={reducedMotion}
-            wordmark={content.intro.name}
             loadingLabel={content.loading.label}
             failureLabel={content.fallback.modelUnavailable}
             modelAnchorRef={modelAnchorRef}
@@ -175,10 +175,7 @@ export function Experience({
                       project={project}
                       index={index}
                       active={reducedMotion}
-                      content={{
-                        ...item,
-                        externalLinkLabel: content.projects.externalLinkLabel,
-                      }}
+                      content={item}
                       key={project.id}
                     />
                   )

@@ -8,7 +8,6 @@ export interface SiteContent {
   projects: {
     heading: string
     repositoryLabel: string
-    externalLinkLabel: string
     items: Record<'ape' | 'toolStudio' | 'rhoiScribe' | 'ahcl', {
       name: string
       owner: string
@@ -23,5 +22,6 @@ export interface SiteContent {
       ariaLabel: string
     }>
   }
+  footer: { copyright: string }
   fallback: { modelUnavailable: string }
 }

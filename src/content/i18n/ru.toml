@@ -16,7 +16,6 @@ line2 = "Позже к этому добавились культурный об
 [projects]
 heading = "Некоторые работы"
 repositoryLabel = "Репозиторий"
-externalLinkLabel = "Открыть репозиторий"
 
 [projects.items.ape]
 name = "A Pathetic Epoch: Rejuvenation In Purgatory"
@@ -37,7 +36,7 @@ description = "Локальный MCP-сервер и Skill для агентн�
 ariaLabel = "Открыть репозиторий czxieddan/RHoiScribe в новой вкладке"
 
 [projects.items.ahcl]
-name = "Aperip Heimdall Commons License 1.1"
+name = "Aperip Heimdall Commons License"
 owner = "Aperip Daedalus Foundation"
 description = "Открытая лицензия, в центре которой постоянный доступ к полному соответствующему исходному коду, сохранение истории изменений, прозрачность зависимостей, переход на новые версии и передача условий далее."
 ariaLabel = "Открыть официальный каталог лицензий AHCL в новой вкладке"
@@ -64,6 +63,9 @@ ariaLabel = "Открыть страницу Aperip на Bilibili в новой 
 [platforms.items.x]
 name = "X"
 ariaLabel = "Открыть страницу Aperip в X в новой вкладке"
+
+[footer]
+copyright = "© Aperip"
 
 [fallback]
 modelUnavailable = "Не удалось загрузить сцену."

@@ -16,7 +16,6 @@ line2 = "Since then, it has also focused on cultural exchange and promotion, ope
 [projects]
 heading = "Selected work"
 repositoryLabel = "Repository"
-externalLinkLabel = "View repository"
 
 [projects.items.ape]
 name = "A Pathetic Epoch: Rejuvenation In Purgatory"
@@ -37,7 +36,7 @@ description = "A local MCP server and Skill for Hearts of Iron IV modding agent 
 ariaLabel = "Open the czxieddan/RHoiScribe repository in a new tab"
 
 [projects.items.ahcl]
-name = "Aperip Heimdall Commons License 1.1"
+name = "Aperip Heimdall Commons License"
 owner = "Aperip Daedalus Foundation"
 description = "An open-source license centered on continuous access to complete corresponding source, preserved modification history, dependency transparency, version migration, and downstream propagation."
 ariaLabel = "Open the official AHCL license catalog in a new tab"
@@ -64,6 +63,9 @@ ariaLabel = "Open Aperip on Bilibili in a new tab"
 [platforms.items.x]
 name = "X"
 ariaLabel = "Open Aperip on X in a new tab"
+
+[footer]
+copyright = "© Aperip"
 
 [fallback]
 modelUnavailable = "The scene could not be loaded."

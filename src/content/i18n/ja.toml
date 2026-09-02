@@ -16,7 +16,6 @@ line2 = "その後は、文化の交流と発信、オープンソースへの�
 [projects]
 heading = "主な取り組み"
 repositoryLabel = "リポジトリ"
-externalLinkLabel = "リポジトリを見る"
 
 [projects.items.ape]
 name = "A Pathetic Epoch: Rejuvenation In Purgatory"
@@ -37,7 +36,7 @@ description = "Hearts of Iron IVのMod制作に携わるエージェント向け
 ariaLabel = "czxieddan/RHoiScribeリポジトリを新しいタブで開く"
 
 [projects.items.ahcl]
-name = "Aperip Heimdall Commons License 1.1"
+name = "Aperip Heimdall Commons License"
 owner = "Aperip Daedalus Foundation"
 description = "完全な対応ソースの継続的な提供、変更履歴の保存、依存関係の透明性、バージョン移行、下流への継承を重視するオープンソースライセンスです。"
 ariaLabel = "AHCLの公式ライセンス一覧を新しいタブで開く"
@@ -64,6 +63,9 @@ ariaLabel = "AperipのBilibiliページを新しいタブで開く"
 [platforms.items.x]
 name = "X"
 ariaLabel = "AperipのXページを新しいタブで開く"
+
+[footer]
+copyright = "© Aperip"
 
 [fallback]
 modelUnavailable = "シーンを読み込めませんでした。"
