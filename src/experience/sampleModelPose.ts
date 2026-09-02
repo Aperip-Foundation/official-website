@@ -6,7 +6,7 @@ export interface ModelPose {
 export const PRESENTATION_ROTATION: [number, number, number] = [
   -0.08,
   0.18,
-  Math.PI / 45,
+  21.8 * Math.PI / 180,
 ]
 
 function clampProgress(progress: number): number {
